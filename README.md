@@ -12,6 +12,11 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+Run docker compse
+In dontainer terminal run:
+mongosh --host localhost --port 27017 -u "root.admin" -p "root.admin.password" --authenticationDatabase admin
+use simple-book-store
+db.createUser({user: "book-store-admin", pwd: "book-store-pwd", roles: ["readWrite"]})
 
 * Database initialization
 
