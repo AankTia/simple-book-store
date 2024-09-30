@@ -13,4 +13,7 @@
     <% @authors.each do |author| %>
       <%= render author %>
     <% end %>
+  </table>
+
+  <%= paginate @authors %>
 </div>
