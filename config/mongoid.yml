@@ -178,8 +178,13 @@ test:
     default:
       database: simple_book_store_test
       hosts:
-        - localhost:27017
+        - localhost:27020
       options:
+        # The name of the user for authentication.
+        user: 'book-store-admin'
+
+        # The password of the user for authentication.
+        password: 'book-store-pwd'
         read:
           mode: :primary
         max_pool_size: 1

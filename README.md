@@ -18,6 +18,9 @@ mongosh --host localhost --port 27017 -u "root.admin" -p "root.admin.password" -
 use simple-book-store
 db.createUser({user: "book-store-admin", pwd: "book-store-pwd", roles: ["readWrite"]})
 
+use simple_book_store_test
+db.createUser({user: "book-store-admin", pwd: "book-store-pwd", roles: ["readWrite"]})
+
 * Database initialization
 
 * How to run the test suite
