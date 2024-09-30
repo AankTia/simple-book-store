@@ -11,13 +11,23 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=root.admin.password
       - MONGO_INITDB_DATABASE=admin
     networks:
-      - dev-net
+      - simple-book-store-net
     volumes:
       - mongo:/data/db
       - mongo:/data/configdb
+  redis:
+    image: tiawidi/redis:7.4.0
+    container_name: simple-book-store-redis
+    tty: true
+    environment:
+      - TZ='Asia/Jakarta'
+    ports:
+      - "6379:6379"
+    networks:
+      - simple-book-store-net
 volumes:
   mongo:
     driver: local
 networks:
-  dev-net:
+  simple-book-store-net:
     driver: bridge
