@@ -3,8 +3,8 @@ class Book
   include Mongoid::Timestamps
 
   field :title, type: String
-  field :isbn, type: String
   field :publication_year, type: Integer
+  field :publisher, type: String
 
   validates :title, presence: true
   validates :publication_year, presence: true
