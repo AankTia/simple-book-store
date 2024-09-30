@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  root to: "books#index"
+
+  devise_for :users
   
   resources :users
   resources :authors
