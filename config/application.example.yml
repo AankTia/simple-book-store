@@ -1,0 +1,10 @@
+REDIS_URL_FOR_SIDEKIQ: 'redis://0.0.0.0:6379'
+
+# SMTP Config
+SMTP_ADDRESS: 'smtp.gmail.com'
+SMTP_PORT: 587
+SMTP_DOMAIN: 'gmail.com'
+SMTP_USER_NAME: ''
+SMTP_PASSWORD: ''
+SMTP_AUTH: 'plain'
+

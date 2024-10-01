@@ -16,7 +16,7 @@ services:
       - mongo:/data/db
       - mongo:/data/configdb
   redis:
-    image: tiawidi/redis:7.4.0
+    image: tiawidi/redis:latest
     container_name: simple-book-store-redis
     tty: true
     environment:
