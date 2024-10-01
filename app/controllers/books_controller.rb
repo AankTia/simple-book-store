@@ -28,7 +28,7 @@ class BooksController < ApplicationController
 
     respond_to do |format|
       if @book.save
-        BookEmailNotificationJob.perform_sync(current_user&.email, @book.id.to_s)
+        BookEmailNotificationJob.perform_async(current_user&.email, @book.id.to_s)
 
         format.html { redirect_to @book, notice: "Book was successfully created." }
         format.json { render :show, status: :created, location: @book }
