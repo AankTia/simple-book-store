@@ -1,6 +1,12 @@
 <h2>Books</h2>
 
-<p><%= link_to "New book", new_book_path %></p>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group me-2" role="group" aria-label="Second group">
+    <%= link_to "New Book", new_book_path, class: "btn btn-primary" %>
+  </div>
+</div>
+
+</br>
 
 <div id="books">
   <table class="table table-striped table-sm">
