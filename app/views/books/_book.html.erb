@@ -1,7 +1,9 @@
-<tr id="<%= dom_id book %>">
+<tr>
   <td><%= book.title %></td>
   <td><%= book.publisher %></td>
   <td><%= book.publication_year %></td>
   <td><%= book.author.name %></td>
-  <td><%= link_to "Show this book", book %></td>
+  <td><%= book.author.created_at %></td>
+  <td><%= book.author.updated_at %></td>
+  <td><%= link_to "Show", book %></td>
 </tr>
