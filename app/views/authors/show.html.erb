@@ -1,18 +1,30 @@
-<p style="color: green"><%= notice %></p>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group me-2" role="group" aria-label="Second group">
+    <%= link_to "New Author", new_author_path, class: "btn btn-primary" %>
+  </div>
+  <div class="btn-group me-2" role="group" aria-label="Second group">
+    <%= link_to "Edit Author", edit_author_path(@author), class: "btn btn-warning" %>
+  </div>
+  <div class="btn-group" role="group" aria-label="Third group">
+    <%= button_to "Destroy Author", @author, method: :delete, class: "btn btn-danger" %>
+  </div>
+</div>
 
-<%#= render @author %>
-<div id="authors">
-  <table>
+</br>
+
+<table class="table table-striped table-sm">
+  <tbody>
     <tr>
-      <td>Name</td>
+      <td style="width:10%">Name</td>
       <td><%= @author.name %></td>
     </tr>
-  </table>
-</div>
-
-<div>
-  <%= link_to "Edit this author", edit_author_path(@author) %> |
-  <%= link_to "Back to authors", authors_path %>
-
-  <%= button_to "Destroy this author", @author, method: :delete %>
-</div>
+    <tr>
+      <td>Created At</td>
+      <td><%= @author.created_at %></td>
+    </tr>
+    <tr>
+      <td>Updated At</td>
+      <td><%= @author.updated_at %></td>
+    </tr>
+  </tbody>
+</table>
